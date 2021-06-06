@@ -32,7 +32,7 @@ if ($do == 'Manage') {
   </div>
 </div>
 
-<?php include $comp . "footer.php"; ?>
+<?php include $compPublic . "footer.php"; ?>
 
 
 <script>

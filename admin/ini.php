@@ -13,6 +13,7 @@ $_vueApp = $root . "layout/js/vueApp/";
 
 /*s-iclude*/
 $comp = $root . "include/comp/";
+$compPublic = $comp . "public/";
 $func = $root . "include/func/";
 $lang = $root . "include/lang/";
 /*e-incluse*/
@@ -48,8 +49,8 @@ if (isset($_lang)) {
 } else
   include  $lang . "eng.php";
 
-include $comp . "header.php";
+include $compPublic . "header.php";
 
 
 if (!isset($NonNavBar))
-  include $comp . "navbar.php";
+  include $compPublic . "navbar.php";

@@ -17,9 +17,9 @@
   <!-- FONT AWSOME CSS -->
   <link rel="stylesheet" href="<?php echo $_css ?>all.min.css">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="<?php _lang('bootstrap' )  ?>">
-
-  <!-- USER CSS -->
+ 
+   <link rel="stylesheet" href="<?php _lang('bootstrap' )  ?> ">
+    <!-- USER CSS -->
   <link rel="stylesheet" href="<?php echo $_css ?>style.css">
 
   <title><?php getTitle(); ?></title>
