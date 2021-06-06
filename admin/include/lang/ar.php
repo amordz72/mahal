@@ -4,9 +4,10 @@ function _lang($phrase)
 {
     static $lang = array(
         'html' => '<html lang="ar" dir="rtl>"',
+        'bootstrap' =>   'layout/css/bootstrap.rtl.min.css',
         'lang' => 'العربية',
-        'user' => 'عمر',
+        'author' => 'عمر',
         'HOME' => 'الرئيسة',
     );
-    return $lang[$phrase];
+    echo $lang[$phrase];
 }

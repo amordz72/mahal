@@ -7,7 +7,6 @@ session_start();
 $root = "";
 
 
-
 $_css = $root . "layout/css/";
 $_js = $root . "layout/js/";
 $_vueApp = $root . "layout/js/vueApp/";
@@ -43,13 +42,14 @@ if (isset($_lang)) {
 
   if ($_lang == "ar")
     include  $lang . "ar.php";
+
   else
     include  $lang . "eng.php";
 } else
   include  $lang . "eng.php";
 
 include $comp . "header.php";
-if (!isset($NonNavBar)) {
+
+
+if (!isset($NonNavBar))
   include $comp . "navbar.php";
-} else {
-}
