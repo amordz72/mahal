@@ -1,8 +1,7 @@
 <!doctype html>
-<?php echo (isset($ar)) ? '<html lang="ar" dir="rtl">' : '<html lang="en" dir="ltr">'; ?>
-
-<!-- <html lang="en" dir="ltr"> -->
-
+ 
+<?php echo(_lang('html'))?>
+ 
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8">

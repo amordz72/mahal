@@ -34,25 +34,22 @@ $work = $images . "work/";
 $fontGoogleCdn = 'https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap';
 
 
- include $func . "conn.php";
+include $func . "conn.php";
 include $func . "method.php";
-include $comp . "header.php";
- 
 
-if (isset($lng)) {
 
-  if ($lng == "ar") {
+
+if (isset($_lang)) {
+
+  if ($_lang == "ar")
     include  $lang . "ar.php";
-    
-  } else {
+  else
     include  $lang . "eng.php";
-  }
-} else {
+} else
   include  $lang . "eng.php";
-}
 
+include $comp . "header.php";
 if (!isset($NonNavBar)) {
   include $comp . "navbar.php";
 } else {
 }
- 

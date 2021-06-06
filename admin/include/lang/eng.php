@@ -4,10 +4,11 @@
     function _lang($phrase)
     {
         static $lang = array(
+            'html' => '<html lang="en" dir="ltr>"',
             'lang' => 'english',
             'user' => 'amor',
              'HOME' => 'HOME',
-             'userM' => 'HOME',
+             
         );
         return $lang[$phrase];
     }

@@ -1,6 +1,8 @@
 <?php
 $NonNavBar = false; //
 $pgTitle = "Login";
+$_lang='ar';
+
 include "ini.php";
 
 if (isset($_SESSION['usName'])) {
