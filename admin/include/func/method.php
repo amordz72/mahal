@@ -3,7 +3,7 @@
 function thisPage()
 {
     echo $_SERVER['PHP_SELF'];
-}//تحويل الى الصفحة  
+} //تحويل الى الصفحة  
 function redirect($url = '')
 {
     if ($url == '') {
@@ -13,6 +13,11 @@ function redirect($url = '')
         header("Location:" . $url);
         exit();
     }
+}
+function issetUser($usName)
+{
+    if (!isset($usName))
+        header("Location:index.php");
 }
 function alert($msg = '')
 {
@@ -29,9 +34,9 @@ function getTitle()
         echo "Default";
     }
 }
- 
 
-function _print( string $text)
+
+function _print(string $text)
 {
     echo $text;
 }
