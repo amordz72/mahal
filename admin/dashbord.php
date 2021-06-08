@@ -63,7 +63,7 @@ if ($do == 'Manage') {
 
 
 <?php include $compPublic . "footer.php"; 
-include_once "db.php";
+// include_once "db.php";
 ?>
 
 

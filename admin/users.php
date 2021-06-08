@@ -12,6 +12,14 @@ if (isset($_SESSION['usName'])) {
 
 
   if ($do == 'Manage') {
+
+?>
+<div id="app">
+
+
+
+</div>
+<?php
   } else if ($do == 'Add') {
   } else if ($do == 'edit') {
 
@@ -44,7 +52,7 @@ if (isset($_SESSION['usName'])) {
 
 
 
-
 <?php include $comp . "footer.php"; ?>
 
+<script src="<?php echo $_vueApp."usersApp.js"?>"></script>
 
