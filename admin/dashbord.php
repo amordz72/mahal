@@ -27,7 +27,7 @@ if ($do == 'Manage') {
     <h1 class="text-center">فاتورة بيع</h1>
 
     <form action="" method="post">
-      <table class="table table-hover ">
+      <table class="table table-hover " id="move">
         <thead>
           <tr>
 
@@ -40,7 +40,11 @@ if ($do == 'Manage') {
           <tr>
 
             <td>user3</td>
-            <td>lem</td>
+            <td>lem3</td>
+          </tr>
+          <tr>
+            <td>user4</td>
+            <td>lem4</td>
           </tr>
 
         </tbody>
@@ -58,44 +62,59 @@ if ($do == 'Manage') {
 
 
 
-<?php include $compPublic . "footer.php"; ?>
+<?php include $compPublic . "footer.php"; 
+include_once "db.php";
+?>
+
+
+
+<?php
+
+
+
+?>
+
 
 
 <script>
-  document.getElementById('id_title').innerText = "<?php echo $_SESSION['usName']; ?>";
+const tableMath=document.getElementById('move');
+var count=tableMath.rows.length;
 
+for (let line=1; line < count; line++)
+  {
+    
+     
 
+    
+  
+}
 
-
-
+    
+ 
+  // alert(count);
 </script>
 <?php
+if (isset($_POST['btnOk'])) {
+  $sql = "delete from `users2`;";
+  $sql = "INSERT INTO `users2`( `usName`, `usLast`) VALUES  (' `usName`',' `usLast`')";
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "mahal";
+  if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$sql = "INSERT INTO `users2`( `usName`, `usLast`) VALUES ('usName-2','usLast-2')";
+  $conn->close();
+  alert('btnOk');
 
 
+  // if ($conn->query($sql) === TRUE) {
+  //   echo "New record created successfully";
+  // } else {
+  //   echo "Error: " . $sql . "<br>" . $conn->error;
+  // }
 
-
-  if (isset($_POST['btnOk'])) {
-    if ($conn->query($sql) === TRUE) {
-      echo "New record created successfully";
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    
-    $conn->close();
-alert('btnOk');
-}
+  // $conn->close();
+  // alert('btnOk');
+  }
 ?>
