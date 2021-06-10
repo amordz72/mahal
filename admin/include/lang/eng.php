@@ -1,7 +1,7 @@
 <?php
 
-
-function _lang($phrase)
+$root = "../";
+function _lang($phrase,$root="../")
 {
     static $lang = array(
         'html' => '<html lang="en" dir="ltr>"',
@@ -14,5 +14,5 @@ function _lang($phrase)
         'loginTitle' => 'LOGIN ADMIN',
 
     );
-    echo $lang[$phrase];
+    echo $root.$lang[ $phrase];
 }

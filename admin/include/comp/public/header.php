@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="<?php echo $_css ?>all.min.css">
   <!-- Bootstrap CSS -->
  
-   <link rel="stylesheet" href="<?php _lang('bootstrap' )  ?> ">
+   <link rel="stylesheet" href="<?php echo $bootstrapStyle ?> ">
     <!-- USER CSS -->
   <link rel="stylesheet" href="<?php echo $_css ?>style.css">
 

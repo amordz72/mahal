@@ -4,7 +4,7 @@
 //use this to hide all errore
 // error_reporting(1);
 session_start();
-$root = "";
+$root = "../";
 
 
 $_css = $root . "layout/css/";
@@ -29,7 +29,7 @@ $team = $images . "team/";
 $Testimonial = $images . "Testimonial/";
 $work = $images . "work/";
 /*e-image*/
-
+$bootstrapStyle=$_css."bootstrap.min.css";
 
 $fontGoogleCdn = 'https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap';
 
@@ -42,7 +42,10 @@ include $func . "method.php";
 if (isset($_lang)) {
 
   if ($_lang == "ar")
-    include  $lang . "ar.php";
+   {
+     include  $lang . "ar.php";
+     $bootstrapStyle=$_css."bootstrap.rtl.min.css";
+  }
 
   else
     include  $lang . "eng.php";
