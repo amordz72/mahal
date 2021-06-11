@@ -7,24 +7,38 @@ hover -up down
 
 */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+body {
+    font-family: Geneva, "Segoe UI", Tahoma, Verdana, sans-serif;
 }
 .container {
     width: 90%;
     margin: 0 auto;
-    background-color: aqua;
+    background-color: rgb(224, 240, 240);
 }
 .heider {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: rgba(22, 22, 22, 0.603);
 }
 .heider ul {
-    display: inline;
-    text-decoration: none;  
-    /*background-color: brown;*/
+    display: flex;
+    list-style: none;
+    /**/
+    background-color: rgba(175, 4, 4, 0.774);
+    font-size: 1rem;
 }
-
-
+.heider ul li {
+    margin: 5px;
+}
+.heider ul a {
+    color: white;
+    text-decoration: none;
+}
+#logo {
+    margin: 0;
+}
