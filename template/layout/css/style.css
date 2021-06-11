@@ -1,0 +1,87 @@
+/*position*/
+
+.childElement {
+  /*
+  prop: position:absolute
+  بنسبة_للصفحة او عنصر يحدد له
+   يجب ان يكون ابوه  
+   relative
+   او مستوى اعلى حتى يصل للصفحة
+  */
+  position: absolute;
+
+  /*ثابت
+  المشكل تحول عنصر البلوك الى انلاين
+  يجب وضع العرض مئة من مئة 
+  width: 100%;
+  */
+  position: fixed;
+  /*القيمة الافتراضية*/
+  position: static;
+  /*بنسبة_لموقعه*/
+  position: relative;
+
+  /*example
+  right: 0px; top:0px;left:0px; bottom: 0px;
+  */
+}
+/*------------------------------*/
+
+/*
+
+block
+العنصر البلوك يعرف عند تغيير خلفيته بلون تجد انه لون يصل لاطراف الصفحة او الاب
+inline
+العنصر الانلين يعرف عند تغيير خلفيته بلون تجد انه لون يصل لا يتعدى  العنصر
+
+/*------------------------------*/
+
+/*
+Hero img
+توسيط عنصر داخل عنصر
+يجب الاب ان يكون
+position: relative;
+
+*/
+
+.center-parent {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+}
+
+/*------------------------------*/
+/*-------------لوضع عنصرين على بعض
+ position: absolute;
+
+-----------------*/
+
+/*--------------
+clear: both;
+لاصلاح ارتفاع  الاب 
+----------------*/
+.parent {
+  background: yellowgreen;
+  width: 500px;
+}
+.item {
+  width: 100pt;
+  height: 100px;
+  background: red;
+  margin: 5px;
+  float: left;
+}
+.clear {
+  clear: both;
+}
+/*html example
+
+ <div class="parent ">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="clear"></div>
+    </div>
+
+*/

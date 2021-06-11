@@ -6,3 +6,25 @@ hover effect - ltr
 hover -up down
 
 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: aqua;
+}
+.heider {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.heider ul {
+    display: inline;
+    text-decoration: none;  
+    /*background-color: brown;*/
+}
+
+
