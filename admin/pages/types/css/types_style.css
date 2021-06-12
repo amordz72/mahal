@@ -1,0 +1,64 @@
+ #frmtypes{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 14px;
+ font-weight: bold;
+ background-color: rgb(57, 181, 212); 
+ margin: 5px;
+ padding :33px 22px 55px 22px;
+} 
+  #frmtypes h2   {
+   text-align: center;
+    font-weight: bold;
+} 
+#frmtypes select   {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-size: 14px;
+    font-weight: bold;
+}
+.bor{
+    border: 3px solid black; 
+}
+ #data{
+    margin: 100px 0px 100px 0px;
+   }
+  #data input{
+    margin-top: 10px !important;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    }  
+ #dv_serche
+{
+  text-align: center !important;
+   margin: 10px; 
+} 
+#txt_serche
+{
+height: 35px;
+}
+#btn_serche
+{
+width:100px;
+height: 35px;
+}
+#form-group-tyId
+{
+  width: 100%;
+   }
+#form-group-tyName
+{
+  width: 100%;
+   }
+  #btn-div{
+        margin-top: 15px;
+           padding: 5px;
+           }
+#div_tbl_types
+{
+margin-top: 33px !important;
+  text-align: center !important;
+}
+ #tbl_types
+{
+  text-align: center !important;
+}

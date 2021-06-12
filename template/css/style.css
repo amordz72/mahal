@@ -29,8 +29,8 @@ body {
 .heider ul {
     display: flex;
     list-style: none;
-    /**/
-    background-color: rgba(175, 4, 4, 0.774);
+    /*
+    background-color: rgba(175, 4, 4, 0.774);*/
     font-size: 1rem;
 }
 .heider ul li {
