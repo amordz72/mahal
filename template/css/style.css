@@ -24,6 +24,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background-color: rgba(22, 22, 22, 0.603);
+    height: 50px;
 }
 .heider ul {
     display: flex;
