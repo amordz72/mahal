@@ -2,5 +2,5 @@
 $username="root";
 $password="";
 $host="localhost";
-$database="NewStor";
+$database="mahal";
 ?>
