@@ -1,5 +1,6 @@
 <?php
- 
+ header("Access-Control-Allow-Origin: *");
+ header("Access-Control-Allow-Headers: *");
 include '../config.php';
 $connect = new PDO("mysql:host=$host;dbname=$database", "$username", "$password"); 
   $received_data = json_decode(file_get_contents("php://input"));
