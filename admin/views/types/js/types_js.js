@@ -13,6 +13,7 @@ var application_types = new Vue({
     date: new Date().toISOString().substr(0, 10),
     TYID: "",
     TYNAME: "",
+    title:'الانواع'
   },
   methods: {
     clear: function () {
