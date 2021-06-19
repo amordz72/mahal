@@ -19,6 +19,13 @@ function issetUser($usName)
     if (!isset($usName))
         header("Location:index.php");
 }
+ function go($page,$do,$par)
+{
+    /* users.php?do=edit&id=7
+ echo  "$page?do=$do&id=<?php . ($_SESSION['usId'])";*/
+ echo "$page?do=$do&par=$par";
+
+}
 function alert($msg = '')
 {
     if ($msg != '') {

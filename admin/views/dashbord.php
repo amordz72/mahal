@@ -6,12 +6,12 @@ issetUser($_SESSION['usName']);
 
 
 
-
+/*//تحويل
 $do = '';
 $do = (isset($_GET['do'])) ? $_GET['do'] : 'Manage';
 
 
-/*//تحويل
+
 if ($do == 'Manage') {
 } else if ($do == 'Add') {
 } else if ($do == 'edite') {
@@ -26,8 +26,12 @@ if ($do == 'Manage') {
   <div class="row" class="border mt-5 ">
     <h1 class="text-center">dashboord</h1>
 
- <a href="types/types.php" target="_blank" 
-  rel="noopener noreferrer">type</a>
+    <a href="<?php go('types.php', 'add', $_SESSION['usId']) ?>" target="_blank" rel="noopener noreferrer">type</a>
+
+    <a href="<?php go('factor.php', 'buy', 'add') ?>" target="_blank" rel="noopener noreferrer">buy</a>
+
+    <a href="<?php go('factor.php', 'sel', 'add') ?>" target="_blank" rel="noopener noreferrer">sel</a>
+
   </div>
 </div>
 
@@ -54,40 +58,9 @@ if ($do == 'Manage') {
   const tableMath = document.getElementById('move');
   var count = tableMath.rows.length;
 
-  for (let line = 1; line < count; line++) {
 
-
-
-
-
-  }
 
 
 
   // alert(count);
 </script>
-<?php
-if (isset($_POST['btnOk'])) {
-  $sql = "delete from `users2`;";
-  $sql = "INSERT INTO `users2`( `usName`, `usLast`) VALUES  (' `usName`',' `usLast`')";
-
-  if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-  } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-  }
-
-  $conn->close();
-  alert('btnOk');
-
-
-  // if ($conn->query($sql) === TRUE) {
-  //   echo "New record created successfully";
-  // } else {
-  //   echo "Error: " . $sql . "<br>" . $conn->error;
-  // }
-
-  // $conn->close();
-  // alert('btnOk');
-}
-?>
