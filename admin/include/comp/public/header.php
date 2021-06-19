@@ -20,7 +20,7 @@
  
    <link rel="stylesheet" href="<?php echo $bootstrapStyle ?> ">
     <!-- USER CSS -->
-  <link rel="stylesheet" href="<?php echo $_css ?>style.css">
+  <link rel="stylesheet" href="<?php echo $folder ?>css/style.css">
 
   <title><?php getTitle(); ?></title>
 </head>

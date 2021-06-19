@@ -13,6 +13,7 @@ var application_types = new Vue({
     date: new Date().toISOString().substr(0, 10),
     TYID: "",
     TYNAME: "",
+    title:'الانواع'
   },
   methods: {
     clear: function () {
@@ -28,7 +29,7 @@ var application_types = new Vue({
     },
     max: function () {
       axios
-        .post("action.php", {
+        .post("types/action.php", {
           action: "max_types",
         })
         .then(function (response) {
@@ -38,7 +39,7 @@ var application_types = new Vue({
     },
     fetchAllData_types: function () {
       axios
-        .post("action.php", {
+        .post("types/action.php", {
           action: "g_types",
         })
         .then(function (response) {
@@ -55,7 +56,7 @@ var application_types = new Vue({
       if (application_types.TYID != "" && application_types.TYNAME != "") {
         if (application_types.actionButton == "Insert") {
           axios
-            .post("action.php", {
+            .post("types/action.php", {
               action: "i_types",
               _tyId: application_types.TYID,
               _tyName: application_types.TYNAME,
@@ -70,7 +71,7 @@ var application_types = new Vue({
         }
         if (application_types.actionButton == "Update") {
           axios
-            .post("action.php", {
+            .post("types/action.php", {
               action: "u_types",
               _tyId: application_types.TYID,
               _tyName: application_types.TYNAME,
@@ -90,7 +91,7 @@ var application_types = new Vue({
     },
     fetchData_types: function (id) {
       axios
-        .post("action.php", {
+        .post("types/action.php", {
           action: "s_types",
           _tyId: id,
         })
@@ -111,7 +112,7 @@ var application_types = new Vue({
           tbl_types.rows[i].cells.namedItem("row_tyName").innerHTML;
         application_types.ALL = [__tyId, __tyName];
         axios
-          .post("action.php", {
+          .post("types/action.php", {
             action: "add_all_types",
             _all: application_types.ALL,
           })
@@ -181,7 +182,7 @@ var application_types = new Vue({
     },
     GetDataById_types: function (id = 1) {
       axios
-        .post("action.php", {
+        .post("types/action.php", {
           action: "GetDataById_types",
           _tyId: id,
         })
@@ -199,7 +200,7 @@ var application_types = new Vue({
     deleteData_types: function (id) {
       if (confirm("Are you sure you want to remove this data?")) {
         axios
-          .post("action.php", {
+          .post("types/action.php", {
             action: "d_types",
             _tyId: id,
           })
